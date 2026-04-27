@@ -1484,15 +1484,15 @@
         .row {
           grid-template-columns: repeat(3, 1fr);
         }
-        
+
         .row .col-lg-6 {
           grid-column: span 1;
         }
-        
+
         .row.testimonials-row {
           grid-template-columns: repeat(2, 1fr);
         }
-        
+
         .row.testimonials-row .col-lg-6 {
           grid-column: span 1;
         }
@@ -1774,7 +1774,7 @@
 
       <nav class="mobile-nav-panel" id="mobileNav">
         <div class="mobile-nav-inner">
-          
+
           <div class="mobile-search-wrapper">
             <input type="text" placeholder="Search..." id="mobileSearchInput" autocomplete="off" />
             <i class="fas fa-search"></i>
@@ -1827,9 +1827,9 @@
       <video autoplay muted loop playsinline class="hero-video">
         <source src="assets/videoplayback.mp4" type="video/mp4">
       </video>
-      
+
       <div class="hero-overlay"></div>
-      
+
       <div class="container">
         <div class="hero-content">
           <h1 class="hero-h1 animate-on-scroll">
@@ -2215,10 +2215,9 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <h4>Contact Accra Office</h4>
-            <p>Plot NO.21, Airport City</p>
-            <p>8th Floor, One Airport Square</p>
-            <p>Accra, Ghana</p>
+            <h4>Contact Atlanta Office</h4>
+            <p>1289 Ascot Ln</p>
+            <p>Atlanta, Georgia 30329</p>
             <p style="margin-top: 15px;">
               <strong>Phone:</strong> +1(470)301-5064<br />
               <strong>Email:</strong> info@woughtonglobal.com<br />
@@ -2228,7 +2227,6 @@
 
           <div class="footer-col">
             <h4>Office Hours</h4>
-            <p><strong>Ghana:</strong> 10am - 5pm GMT</p>
             <p><strong>Atlanta:</strong> 9am - 2pm EST</p>
             <p style="margin-top: 15px;"><em>We respond within 48 hours</em></p>
           </div>
@@ -2400,10 +2398,10 @@
 
           // Sort by score
           results.sort((a, b) => b.score - a.score);
-          
+
           this.currentResults = results;
           this.currentPage = 1;
-          
+
           return results;
         }
 
@@ -2454,21 +2452,21 @@
           const resultItem = document.createElement('div');
           resultItem.className = isMobile ? 'mobile-search-result' : 'search-result-item';
           resultItem.setAttribute('data-link', result.link);
-          
+
           resultItem.innerHTML = `
             <div class="${isMobile ? 'mobile-search-result-category' : 'search-result-category'}">${result.category}</div>
             <div class="${isMobile ? 'mobile-search-result-title' : 'search-result-title'}">${result.title}</div>
             <div class="${isMobile ? 'mobile-search-result-desc' : 'search-result-desc'}">${result.description}</div>
           `;
-          
+
           resultItem.addEventListener('click', () => {
             window.location.href = result.link;
           });
-          
+
           container.appendChild(resultItem);
         });
 
-        // Add pagination if needed NOt needed 
+        // Add pagination if needed NOt needed
         if (searchEngine.getTotalPages() > 1) {
           // const pagination = document.createElement('div');
           // pagination.className = 'search-pagination';
@@ -2479,15 +2477,15 @@
           //     <button id="nextPage" ${searchEngine.currentPage === searchEngine.getTotalPages() ? 'disabled' : ''}>Next</button>
           //   </div>
           // `;
-          
+
           container.appendChild(pagination);
-          
+
           document.getElementById('prevPage')?.addEventListener('click', () => {
             if (searchEngine.prevPage()) {
               renderSearchResults(searchEngine.currentResults, container, isMobile);
             }
           });
-          
+
           document.getElementById('nextPage')?.addEventListener('click', () => {
             if (searchEngine.nextPage()) {
               renderSearchResults(searchEngine.currentResults, container, isMobile);
@@ -2503,7 +2501,7 @@
           searchTimeout = setTimeout(() => {
             const query = e.target.value;
             const results = searchEngine.search(query);
-            
+
             if (query.trim().length > 0) {
               searchDropdown.classList.add('active');
               renderSearchResults(results, searchDropdown, false);
@@ -2531,7 +2529,7 @@
           mobileSearchTimeout = setTimeout(() => {
             const query = e.target.value;
             const results = searchEngine.search(query);
-            
+
             if (query.trim().length > 0) {
               mobileSearchDropdown.classList.add('active');
               renderSearchResults(results, mobileSearchDropdown, true);
@@ -2575,12 +2573,12 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
-            
+
             // Trigger count-up for stat values
             if (entry.target.classList.contains('stat-value')) {
               animateCountUp(entry.target);
             }
-            
+
             observer.unobserve(entry.target);
           }
         });
@@ -2607,8 +2605,8 @@
       });
 
       document.addEventListener('click', (e) => {
-        if (mobileNav.classList.contains('active') && 
-            !mobileNav.contains(e.target) && 
+        if (mobileNav.classList.contains('active') &&
+            !mobileNav.contains(e.target) &&
             !mobileBtn.contains(e.target)) {
           mobileNav.classList.remove('active');
           mobileBtn.innerHTML = '&#9776;';
@@ -2624,7 +2622,7 @@
           const submenuId = 'submenu-' + toggle.getAttribute('data-submenu');
           const submenu = document.getElementById(submenuId);
           const isActive = submenu.classList.contains('active');
-          
+
           // Close all submenus
           document.querySelectorAll('.mobile-submenu').forEach(sm => {
             sm.classList.remove('active');
@@ -2632,7 +2630,7 @@
           document.querySelectorAll('.submenu-toggle').forEach(st => {
             st.classList.remove('active');
           });
-          
+
           // Toggle current submenu
           if (!isActive) {
             submenu.classList.add('active');

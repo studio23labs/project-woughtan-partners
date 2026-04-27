@@ -1444,7 +1444,7 @@
       <nav class="mobile-nav-panel" id="mobileNav">
         <div class="mobile-nav-inner">
           <button class="mobile-close" id="mobileCloseBtn" aria-label="Close menu">✕</button>
-          
+
           <!-- Mobile Search -->
           <div class="mobile-search-wrapper">
             <input type="text" placeholder="Search..." id="mobileSearchInput" autocomplete="off" />
@@ -1570,7 +1570,7 @@
               <p class="member-bio">
                 With over 35 years as an Associate Professor and strategic consultant, Edward brings unmatched economic and advisory experience. He has provided high-level counsel to organizations like the World Bank and the African Peer Review Mechanism.
               </p>
-              
+
               <div class="member-highlights">
                 <div class="highlight-item">
                   <i class="far fa-briefcase"></i>
@@ -1579,7 +1579,7 @@
                     <p>World Bank & Associate Professor</p>
                   </div>
                 </div>
-                
+
                 <div class="highlight-item">
                   <i class="far fa-chart-line"></i>
                   <div class="highlight-content">
@@ -1605,7 +1605,7 @@
               <p class="member-bio">
                 An Emory University MBA, Maxwell combines practical financial services experience from Africa with strategic and technological expertise gained in mission-critical roles at Big Tech companies in the U.S.
               </p>
-              
+
               <div class="member-highlights">
                 <div class="highlight-item">
                   <i class="far fa-graduation-cap"></i>
@@ -1614,7 +1614,7 @@
                     <p>Top-tier business education</p>
                   </div>
                 </div>
-                
+
                 <div class="highlight-item">
                   <i class="far fa-rocket"></i>
                   <div class="highlight-content">
@@ -1745,7 +1745,7 @@
 
         <!-- Investment Drivers -->
         <h3 class="drivers-title">Five Key Investment Drivers</h3>
-        
+
         <div class="driver-card">
           <div class="driver-number">01</div>
           <div class="driver-content">
@@ -1863,9 +1863,9 @@
             <div class="network-flag">
               <i class="fas fa-map-marker-alt"></i>
             </div>
-            <h4 class="network-location">Ghana (HQ)</h4>
+            <h4 class="network-location">Atlanta (HQ)</h4>
             <p class="network-description">
-              Headquartered in Accra with deep government and institutional relationships
+              Headquartered in Atlanta, Georgia with deep government and institutional relationships
             </p>
           </div>
 
@@ -1940,10 +1940,9 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <h4>Contact Accra Office</h4>
-            <p>Plot NO.21, Airport City</p>
-            <p>8th Floor, One Airport Square</p>
-            <p>Accra, Ghana</p>
+            <h4>Contact Atlanta Office</h4>
+            <p>1289 Ascot Ln</p>
+            <p>Atlanta, Georgia 30329</p>
             <p style="margin-top: 15px;">
               <strong>Phone:</strong> +1(470)301-5064<br />
               <strong>Email:</strong>info@woughtonglobal.com<br />
@@ -1953,7 +1952,6 @@
 
           <div class="footer-col">
             <h4>Office Hours</h4>
-            <p><strong>Ghana:</strong> 10am - 5pm GMT</p>
             <p><strong>Atlanta:</strong> 9am - 2pm EST</p>
             <p style="margin-top: 15px;"><em>We respond within 48 hours</em></p>
           </div>
@@ -2005,8 +2003,8 @@
       });
 
       document.addEventListener('click', (e) => {
-        if (mobileNav.classList.contains('active') && 
-            !mobileNav.contains(e.target) && 
+        if (mobileNav.classList.contains('active') &&
+            !mobileNav.contains(e.target) &&
             !mobileBtn.contains(e.target)) {
           mobileNav.classList.remove('active');
           document.body.style.overflow = '';
@@ -2033,7 +2031,7 @@
       if (searchInput) {
         searchInput.addEventListener('input', (e) => {
           const query = e.target.value.toLowerCase().trim();
-          
+
           if (query.length > 0) {
             searchDropdown.classList.add('active');
             searchResults.forEach(result => {
@@ -2068,7 +2066,7 @@
       if (mobileSearchInput) {
         mobileSearchInput.addEventListener('input', (e) => {
           const query = e.target.value.toLowerCase().trim();
-          
+
           if (query.length > 0) {
             mobileSearchDropdown.classList.add('active');
             mobileSearchResults.forEach(result => {

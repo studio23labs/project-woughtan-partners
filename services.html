@@ -41,7 +41,7 @@
         scrollbar-width: none;
         -ms-overflow-style: none;
       }
-      
+
       *::-webkit-scrollbar {
         width: 0;
         height: 0;
@@ -1645,10 +1645,9 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <h4>Contact Accra Office</h4>
-            <p>Plot NO.21, Airport City</p>
-            <p>8th Floor, One Airport Square</p>
-            <p>Accra, Ghana</p>
+            <h4>Contact Atlanta Office</h4>
+            <p>1289 Ascot Ln</p>
+            <p>Atlanta, Georgia 30329</p>
             <p style="margin-top: 15px;">
               <strong>Phone:</strong> +1(470)301-5064<br />
               <strong>Email:</strong> info@woughtonglobal.com<br />
@@ -1658,7 +1657,6 @@
 
           <div class="footer-col">
             <h4>Office Hours</h4>
-            <p><strong>Ghana:</strong> 10am - 5pm GMT</p>
             <p><strong>Atlanta:</strong> 9am - 2pm EST</p>
             <p style="margin-top: 15px;"><em>We respond within 48 hours</em></p>
           </div>
@@ -1783,7 +1781,7 @@
           results.sort((a, b) => b.score - a.score);
           this.currentResults = results;
           this.currentPage = 1;
-          
+
           return results;
         }
 
@@ -1814,17 +1812,17 @@
           const resultItem = document.createElement('div');
           resultItem.className = isMobile ? 'mobile-search-result' : 'search-result-item';
           resultItem.setAttribute('data-link', result.link);
-          
+
           resultItem.innerHTML = `
             <div class="${isMobile ? 'mobile-search-result-category' : 'search-result-category'}">${result.category}</div>
             <div class="${isMobile ? 'mobile-search-result-title' : 'search-result-title'}">${result.title}</div>
             <div class="${isMobile ? 'mobile-search-result-desc' : 'search-result-desc'}">${result.description}</div>
           `;
-          
+
           resultItem.addEventListener('click', () => {
             window.location.href = result.link;
           });
-          
+
           container.appendChild(resultItem);
         });
       }
@@ -1836,7 +1834,7 @@
           searchTimeout = setTimeout(() => {
             const query = e.target.value;
             const results = searchEngine.search(query);
-            
+
             if (query.trim().length > 0) {
               searchDropdown.classList.add('active');
               renderSearchResults(results, searchDropdown, false);
@@ -1864,7 +1862,7 @@
           mobileSearchTimeout = setTimeout(() => {
             const query = e.target.value;
             const results = searchEngine.search(query);
-            
+
             if (query.trim().length > 0) {
               mobileSearchDropdown.classList.add('active');
               renderSearchResults(results, mobileSearchDropdown, true);
@@ -1886,8 +1884,8 @@
       });
 
       document.addEventListener('click', (e) => {
-        if (mobileNav.classList.contains('active') && 
-            !mobileNav.contains(e.target) && 
+        if (mobileNav.classList.contains('active') &&
+            !mobileNav.contains(e.target) &&
             !mobileBtn.contains(e.target)) {
           mobileNav.classList.remove('active');
           mobileBtn.innerHTML = '&#9776;';
@@ -1903,7 +1901,7 @@
           const submenuId = 'submenu-' + toggle.getAttribute('data-submenu');
           const submenu = document.getElementById(submenuId);
           const isActive = submenu.classList.contains('active');
-          
+
           // Close all submenus
           document.querySelectorAll('.mobile-submenu').forEach(sm => {
             sm.classList.remove('active');
@@ -1911,7 +1909,7 @@
           document.querySelectorAll('.submenu-toggle').forEach(st => {
             st.classList.remove('active');
           });
-          
+
           // Toggle current submenu
           if (!isActive) {
             submenu.classList.add('active');
